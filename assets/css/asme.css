@@ -1,7 +1,6 @@
 /*
     ASME UW-Madison Chapter — Brand overrides for Arcana template
     Primary accent: #C5050C (ASME / UW-Madison red)
-    Replaces Arcana's default blue (#37c0fb) throughout.
 */
 
 /* Links */
@@ -12,43 +11,65 @@ a:hover {
     color: #9e0409;
 }
 
-/* Nav accent bar and active indicator */
-#nav:after {
+/* All buttons — red by default */
+.button {
     background-color: #C5050C;
+    border-color: #C5050C;
+    color: #fff;
 }
-
-#nav > ul > li.current:before {
-    background-color: #C5050C;
+.button:hover {
+    background-color: #9e0409;
+    border-color: #9e0409;
+    color: #fff !important;
 }
-
-/* Colored wrapper (style3) */
-.wrapper.style3 {
-    background-color: #C5050C;
-    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-}
-
-.wrapper.style3 .button:hover {
-    color: #C5050C !important;
-}
-
-/* Primary button */
 .button.primary {
     background-color: #C5050C;
     border-color: #C5050C;
     color: #fff !important;
 }
-
 .button.primary:hover {
     background-color: #9e0409;
     border-color: #9e0409;
-    color: #fff !important;
+}
+
+/* Nav accent bar and active indicator */
+#nav:after {
+    background-color: #C5050C;
+}
+#nav > ul > li.current:before {
+    background-color: #C5050C;
+}
+
+/* Colored wrapper (style3) — keep white button inside red band */
+.wrapper.style3 {
+    background-color: #C5050C;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+}
+.wrapper.style3 .button {
+    background: #fff;
+    border-color: #fff;
+    color: #C5050C !important;
+}
+.wrapper.style3 .button:hover {
+    background: #f0f0f0;
+    border-color: #f0f0f0;
+    color: #9e0409 !important;
+}
+
+/* Header logo image */
+#logo img.site-logo {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    display: inline-block;
 }
 
 /* Officer / staff card grid */
 .officer-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 1.5em;
     justify-content: center;
     margin: 0 0 2em 0;
     list-style: none;
@@ -57,38 +78,60 @@ a:hover {
 
 .officer-card {
     text-align: center;
-    width: 180px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.officer-card img {
-    width: 140px;
-    height: 140px;
+.officer-card img,
+.officer-card .officer-avatar {
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #C5050C;
     display: block;
     margin: 0 auto 0.75em auto;
+    flex-shrink: 0;
+}
+
+/* Gray placeholder avatar for missing photos */
+.officer-avatar {
+    background: #d0d0d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.officer-avatar svg {
+    width: 60px;
+    height: 60px;
+    fill: #999;
 }
 
 .officer-card .name {
     font-weight: 600;
-    font-size: 0.95em;
+    font-size: 0.85em;
     display: block;
     margin-bottom: 0.2em;
+    min-height: 2.4em;
+    line-height: 1.2em;
 }
 
 .officer-card .title {
-    font-size: 0.8em;
+    font-size: 0.75em;
     color: #888;
     display: block;
     margin-bottom: 0.3em;
+    min-height: 2.4em;
+    line-height: 1.2em;
 }
 
 .officer-card .email {
-    font-size: 0.75em;
+    font-size: 0.72em;
 }
 
-/* Partner logo grid */
+/* Partner logo grid — full color by default */
 .partner-grid {
     display: flex;
     flex-wrap: wrap;
@@ -100,16 +143,23 @@ a:hover {
     margin: 0 0 2em 0;
 }
 
+.partner-grid li {
+    transition: transform 0.2s;
+}
+
 .partner-grid li img {
     max-height: 60px;
     max-width: 180px;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: filter 0.2s, opacity 0.2s;
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
+    display: block;
 }
 
-.partner-grid li img:hover {
-    filter: none;
+.partner-grid li:hover {
+    transform: scale(1.08);
+}
+
+.partner-grid li:hover img {
     opacity: 1;
 }
 
@@ -142,7 +192,7 @@ a:hover {
     transform: scale(1.04);
 }
 
-/* Staff / individual page */
+/* Staff / individual profile page */
 .staff-profile {
     display: flex;
     gap: 3em;
