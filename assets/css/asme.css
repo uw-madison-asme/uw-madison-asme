@@ -4,68 +4,75 @@
 */
 
 /* Links */
-a {
-    color: #C5050C;
-}
-a:hover {
-    color: #9e0409;
+a { color: #C5050C; }
+a:hover { color: #9e0409; }
+
+/* ── Buttons — override Arcana blue throughout ── */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+    background-color: #C5050C !important;
+    background-image: none !important;
+    border-color: #C5050C !important;
+    color: #fff !important;
 }
 
-/* All buttons — red by default */
-.button {
-    background-color: #C5050C;
-    border-color: #C5050C;
-    color: #fff;
-}
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
 .button:hover {
-    background-color: #9e0409;
-    border-color: #9e0409;
+    background-color: #9e0409 !important;
+    background-image: none !important;
+    border-color: #9e0409 !important;
     color: #fff !important;
 }
-.button.primary {
-    background-color: #C5050C;
-    border-color: #C5050C;
-    color: #fff !important;
+
+/* White button inside the red CTA band */
+.wrapper.style3 .button,
+.wrapper.style3 input[type="submit"],
+.wrapper.style3 button {
+    background-color: #fff !important;
+    background-image: none !important;
+    border-color: #fff !important;
+    color: #C5050C !important;
 }
-.button.primary:hover {
-    background-color: #9e0409;
-    border-color: #9e0409;
+.wrapper.style3 .button:hover {
+    background-color: #f0f0f0 !important;
+    border-color: #f0f0f0 !important;
+    color: #9e0409 !important;
 }
 
 /* Nav accent bar and active indicator */
-#nav:after {
-    background-color: #C5050C;
-}
-#nav > ul > li.current:before {
-    background-color: #C5050C;
-}
+#nav:after { background-color: #C5050C; }
+#nav > ul > li.current:before { background-color: #C5050C; }
 
-/* Colored wrapper (style3) — keep white button inside red band */
+/* Colored wrapper (style3) */
 .wrapper.style3 {
     background-color: #C5050C;
     background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 }
-.wrapper.style3 .button {
-    background: #fff;
-    border-color: #fff;
-    color: #C5050C !important;
-}
-.wrapper.style3 .button:hover {
-    background: #f0f0f0;
-    border-color: #f0f0f0;
-    color: #9e0409 !important;
+
+/* ── Header — logo left-aligned ── */
+#header h1#logo {
+    text-align: left;
+    padding-left: 2em;
 }
 
-/* Header logo image */
+/* ── Header logo ── */
 #logo img.site-logo {
-    height: 50px;
-    width: auto;
-    vertical-align: middle;
-    margin-right: 0.5em;
-    display: inline-block;
+    height: 50px !important;
+    width: auto !important;
+    max-width: 160px !important;
+    vertical-align: middle !important;
+    margin-right: 0.5em !important;
+    display: inline-block !important;
+    flex-shrink: 0;
 }
 
-/* Officer / staff card grid */
+/* ── Officer card grid ── */
 .officer-grid {
     display: flex;
     flex-wrap: wrap;
@@ -96,74 +103,68 @@ a:hover {
     flex-shrink: 0;
 }
 
-/* Gray placeholder avatar for missing photos */
+/* Gray SVG placeholder for missing officer photos */
 .officer-avatar {
-    background: #d0d0d0;
+    background: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .officer-avatar svg {
-    width: 60px;
-    height: 60px;
-    fill: #999;
+    width: 56px;
+    height: 56px;
 }
 
+/* Fixed-height text rows so all cards align regardless of name/title length */
 .officer-card .name {
     font-weight: 600;
     font-size: 0.85em;
     display: block;
     margin-bottom: 0.2em;
     min-height: 2.4em;
-    line-height: 1.2em;
+    line-height: 1.2;
 }
-
 .officer-card .title {
     font-size: 0.75em;
     color: #888;
     display: block;
     margin-bottom: 0.3em;
     min-height: 2.4em;
-    line-height: 1.2em;
+    line-height: 1.2;
 }
-
 .officer-card .email {
     font-size: 0.72em;
 }
 
-/* Partner logo grid — full color by default */
+/* ── Partner logo grid — full color by default ── */
 .partner-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 2.5em;
     justify-content: center;
     align-items: center;
     list-style: none;
     padding: 0;
     margin: 0 0 2em 0;
 }
-
 .partner-grid li {
     transition: transform 0.2s;
 }
-
 .partner-grid li img {
     max-height: 60px;
     max-width: 180px;
-    opacity: 0.85;
-    transition: opacity 0.2s, transform 0.2s;
+    opacity: 0.9;
     display: block;
+    transition: opacity 0.2s, transform 0.2s;
 }
-
 .partner-grid li:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
-
 .partner-grid li:hover img {
     opacity: 1;
 }
 
-/* Photo gallery */
+/* ── Photo gallery ── */
 .photo-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -172,14 +173,12 @@ a:hover {
     padding: 0;
     margin: 0 0 2em 0;
 }
-
 .photo-gallery li {
     flex: 1 1 calc(25% - 1em);
     min-width: 200px;
     overflow: hidden;
     border-radius: 4px;
 }
-
 .photo-gallery li img {
     width: 100%;
     height: 200px;
@@ -187,18 +186,16 @@ a:hover {
     display: block;
     transition: transform 0.3s;
 }
-
 .photo-gallery li img:hover {
     transform: scale(1.04);
 }
 
-/* Staff / individual profile page */
+/* ── Staff individual profile page ── */
 .staff-profile {
     display: flex;
     gap: 3em;
     align-items: flex-start;
 }
-
 .staff-profile img {
     width: 200px;
     height: 200px;
@@ -207,11 +204,7 @@ a:hover {
     border: 4px solid #C5050C;
     flex-shrink: 0;
 }
-
-.staff-profile .info h2 {
-    margin-bottom: 0.25em;
-}
-
+.staff-profile .info h2 { margin-bottom: 0.25em; }
 .staff-profile .info .role {
     color: #C5050C;
     font-weight: 600;
@@ -221,15 +214,7 @@ a:hover {
 }
 
 @media screen and (max-width: 736px) {
-    .staff-profile {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .photo-gallery li {
-        flex: 1 1 calc(50% - 1em);
-    }
-    .officer-card {
-        width: 140px;
-    }
+    .staff-profile { flex-direction: column; align-items: center; text-align: center; }
+    .photo-gallery li { flex: 1 1 calc(50% - 1em); }
+    .officer-card { width: 140px; }
 }

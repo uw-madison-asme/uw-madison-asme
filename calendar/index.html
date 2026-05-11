@@ -15,36 +15,17 @@
 			margin-bottom: 1.5em;
 			box-shadow: 0 2px 6px rgba(0,0,0,0.07);
 		}
-		.event-card .event-date {
-			color: #C5050C;
-			font-weight: 600;
-			font-size: 0.9em;
-			margin-bottom: 0.25em;
-			display: block;
-		}
-		.event-card h3 {
-			margin-bottom: 0.5em;
-		}
-		.event-card .event-location {
-			font-size: 0.85em;
-			color: #888;
-			margin-bottom: 0.75em;
-			display: block;
-		}
-		.event-sponsor-logo {
-			max-height: 50px;
-			max-width: 200px;
-			margin-top: 1em;
-			display: block;
-		}
+		.event-card .event-date { color:#C5050C;font-weight:600;font-size:0.9em;margin-bottom:0.25em;display:block; }
+		.event-card h3 { margin-bottom:0.5em; }
+		.event-card .event-location { font-size:0.85em;color:#888;margin-bottom:0.75em;display:block; }
+		.event-sponsor-logo { max-height:50px;max-width:200px;margin-top:1em;display:block; }
 	</style>
 </head>
 <body class="is-preload">
 <div id="page-wrapper">
 
-	<!-- Header -->
 	<div id="header">
-		<h1 id="logo"><a href="/">ASME &mdash; UW-Madison Chapter</a></h1>
+		<h1 id="logo"><a href="/"><img src="/images/asme-logo.png" alt="ASME" class="site-logo" onerror="this.style.display='none'" />ASME &mdash; UW-Madison Chapter</a></h1>
 		<nav id="nav">
 			<ul>
 				<li><a href="/">Home</a></li>
@@ -52,45 +33,22 @@
 				<li><a href="/professional/">Professional</a></li>
 				<li><a href="/design-team/">Design Team</a></li>
 				<li class="current"><a href="/calendar/">Calendar</a></li>
-				<li>
-					<a href="/connect/">Officers</a>
-					<ul>
-						<li><a href="/staff/price-jonas/">Jonas Price &mdash; President</a></li>
-						<li><a href="/staff/koenigs-zachary/">Zachary Koenigs &mdash; Vice President</a></li>
-						<li><a href="/staff/kroll-bethany/">Bethany Kroll &mdash; Treasurer</a></li>
-						<li><a href="/staff/kallal-riley/">Riley Kallal &mdash; Secretary</a></li>
-						<li><a href="/staff/rowell-cecelia/">Cecelia Rowell &mdash; Academic Chair</a></li>
-						<li><a href="/staff/stafne-eva/">Eva Stafne &mdash; Industrial Relations</a></li>
-						<li><a href="/staff/alexander-evan/">Evan Alexander &mdash; Outreach Chair</a></li>
-						<li><a href="/staff/lacrosse-madison/">Madison LaCrosse &mdash; Social Chair</a></li>
-						<li><a href="/staff/meyer-ryan/">Ryan Meyer &mdash; Regional Liaison</a></li>
-						<li><a href="/staff/roeder-braxton/">Braxton Roeder &mdash; Design Team Co-Chair</a></li>
-						<li><a href="/staff/cheng-jun-cha-kristopher/">Kristopher Cheng Jun Cha &mdash; Design Team Co-Chair</a></li>
-						<li><a href="/staff/coolidge-thoene/">Thoene Coolidge &mdash; Procurement Chair</a></li>
-						<li><a href="/staff/dallek-preston/">Preston Dallek &mdash; Underclassmen Rep</a></li>
-						<li><a href="/staff/hocevar-zach/">Zach Hocevar &mdash; Fundraising</a></li>
-						<li><a href="/staff/kulinski-madison/">Madison Kulinski &mdash; ASHRAE Chair</a></li>
-					</ul>
-				</li>
+				<li><a href="/connect/">Officers</a></li>
 				<li><a href="/ashrae/">ASHRAE</a></li>
 			</ul>
 		</nav>
 	</div>
 
-	<!-- Banner -->
 	<div id="banner" style="background-color:#1a1a1a;background-image:none;">
-		<header>
-			<h2>Calendar</h2>
-		</header>
+		<header><h2>Calendar</h2></header>
 	</div>
 
-	<!-- Events -->
 	<div class="wrapper style1">
 		<div class="container">
 			<div class="row">
 				<div class="col-8 col-12-mobile" style="margin:0 auto;">
 					<h2>Upcoming Events</h2>
-					<p>All general meetings are open to everyone &mdash; free food is usually provided. Follow us on Instagram for the latest updates.</p>
+					<p>All general meetings are open to everyone &mdash; free food is usually provided. Follow us on <a href="https://www.instagram.com/asme_madison">Instagram</a> for the latest updates.</p>
 
 					<!-- EDIT: update content here — add/remove/update events each semester -->
 
@@ -105,10 +63,8 @@
 						<span class="event-date">Tuesday, March 10 &mdash; 5:30&ndash;6:30 PM</span>
 						<h3>General Meeting with AEI</h3>
 						<span class="event-location">ME 1106</span>
-						<p>Join us for free dinner and learn about careers at AEI! &ldquo;Our dedication to being the engineering firm of first choice is the driving force behind our practice and collective commitment to excellence. From the challenging projects we pursue to the exceptional talent we seek, we provide innovative, holistic engineering solutions that positively impact society and advance humankind.&rdquo;</p>
-						<img src="../wp-content/uploads/sites/2159/2026/01/AEI-Logo-e1769566324794-1024x297.png"
-							alt="AEI logo"
-							class="event-sponsor-logo" />
+						<p>Join us for free dinner and learn about careers at AEI. &ldquo;Our dedication to being the engineering firm of first choice is the driving force behind our practice and collective commitment to excellence.&rdquo;</p>
+						<img src="/images/logos/aei.png" alt="AEI logo" class="event-sponsor-logo" />
 					</div>
 
 				</div>
@@ -116,7 +72,6 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
 	<div id="footer">
 		<div class="container">
 			<ul class="icons">
@@ -134,8 +89,6 @@
 	</div>
 
 </div>
-
-<!-- Scripts -->
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/jquery.dropotron.min.js"></script>
 <script src="../assets/js/browser.min.js"></script>
