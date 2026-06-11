@@ -4,7 +4,8 @@
       "Bash(awk '{print $9, $5}')",
       "Bash(ls \"C:\\\\Users\\\\rmeyer\\\\OneDrive - Promega Corporation\\\\Documents\\\\GitHub\\\\uw-madison-asme\")",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
