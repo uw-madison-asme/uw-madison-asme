@@ -1,0 +1,73 @@
+backend:
+  name: github
+  repo: uw-madison-asme/uw-madison-asme.github.io
+  branch: main
+  auth_type: implicit
+  app_id: Ov23liUlbDfPKfDD6iuK
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - label: Home
+        name: home
+        file: index.html
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+      - label: Academic
+        name: academic
+        file: academic/index.html
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+      - label: Professional
+        name: professional
+        file: professional/index.html
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+      - label: Design Team
+        name: design-team
+        file: design-team/index.html
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+      - label: Calendar
+        name: calendar
+        file: calendar/index.html
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+      - label: Connect
+        name: connect
+        file: connect/index.html
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+      - label: ASHRAE
+        name: ashrae
+        file: ashrae/index.html
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+  - name: officers
+    label: Officers
+    folder: staff
+    create: true
+    slug: "{{fields.name | slugify}}"
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Email, name: email, widget: string }
+      - { label: Image, name: image, widget: image }
