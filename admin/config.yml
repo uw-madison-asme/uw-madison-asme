@@ -2,8 +2,6 @@ backend:
   name: github
   repo: uw-madison-asme/uw-madison-asme.github.io
   branch: main
-  app_id: Ov23liUlbDfPKfDD6iuK
-  base_url: https://zingy-bubblegum-fcb52a.netlify.app
 
 media_folder: images/uploads
 public_folder: /images/uploads
