@@ -4,8 +4,6 @@ backend:
   branch: main
   auth_type: implicit
   app_id: Ov23liUlbDfPKfDD6iuK
-  base_url: https://uwmadisonasme.org
-  auth_endpoint: oauth/authorize
 
 media_folder: images/uploads
 public_folder: /images/uploads
