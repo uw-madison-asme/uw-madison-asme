@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: uw-madison-asme/uw-madison-asme.github.io
+  repo: uw-madison-asme/uw-madison-asme
   branch: main
   base_url: https://api.netlify.com
 
